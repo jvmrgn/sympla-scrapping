@@ -1,10 +1,8 @@
 import sqlite3
 
-# Conectar ao banco de dados
 conn = sqlite3.connect("eventos_sympla.db")
 cursor = conn.cursor()
 
-# Consulta SQL para mostrar todos os eventos com suas datas, localização e tipo
 cursor.execute("""
 SELECT e.nome, de.data, de.localizacao, e.tipo
 FROM Eventos e

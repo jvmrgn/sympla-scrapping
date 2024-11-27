@@ -11,11 +11,9 @@ ORDER BY de.data ASC
 LIMIT 2
 """)
 
-# Exibir os resultados
 eventos_proximos = cursor.fetchall()
 for evento in eventos_proximos:
     print("------------------------------")
     print(f"Nome: {evento[0]}\nData: {evento[1]}\nLocalização: {evento[2]}\nTipo: {evento[3]}")
 
-# Fechar a conexão
 conn.close()
